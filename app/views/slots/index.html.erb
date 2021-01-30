@@ -1,0 +1,10 @@
+<% @slots.each do |slot| %>
+<%= slot.weekday %> 
+
+<%= link_to "slot",  [@vet, slot] %>
+<% end %>  
+
+<%= link_to "Add Time Slot", new_vet_slot_path %>
+
+
+

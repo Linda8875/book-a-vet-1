@@ -1,0 +1,25 @@
+<h2> Profile</h2>
+
+<h1><%="#{@vet[:first_name]} #{@vet[:last_name]}"%></h1>
+
+<p><%= @vet.phone %></p>
+<p><%= @vet.address %></p>
+<p><%= @vet.languages %></p>
+<p><%= @vet.bio %></p>
+<p><%= @vet.city_name %></p>
+<p><%= @vet.postal_code%></p>
+<p><%= @vet.speciality%></p>
+
+
+<% if @vet == current_vet %>
+  <%= link_to "Edit Profile", edit_vet_path(@vet) %>
+<% end %>
+
+<% if @vet == current_vet %>
+  <%= link_to "Delete Profile", vet_path(@vet), method: :delete, data: { confirm: "Are you sure?"} %>
+<% end %>
+
+<% if @vet == current_vet %>
+  <%= link_to "Time-Slots", vet_slots_path(@vet) %>
+<% end %>
+

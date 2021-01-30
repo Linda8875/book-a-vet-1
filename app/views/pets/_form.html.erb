@@ -1,0 +1,7 @@
+<%= simple_form_for @pet do |f| %>
+  <%= f.input :name, as: :string %>
+  <%= f.input :species, :collection => ['Cat', 'Dog', 'Rodent', 'Bird', 'Horse'] %>
+  <%= f.input :health_info, as: :string %>
+  <%= f.input :birthday, as: :date %>
+  <%= f.submit  %>
+<% end %>   

@@ -1,0 +1,9 @@
+<%= simple_form_for [@vet, @slot] do |f| %>
+  <%= f.input :start_time, as: :time %>
+  <%= f.input :end_time, as: :time %>
+  <%= f.input :weekday, as: :string %>
+  <%= f.input :availability, as: :boolean %>
+  <%= f.submit  %>
+<% end %>   
+
+ 

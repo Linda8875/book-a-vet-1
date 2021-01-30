@@ -1,0 +1,11 @@
+<%= simple_form_for @vet do |f| %>
+  <%= f.input :first_name, as: :string %>
+  <%= f.input :last_name, as: :string %>
+  <%= f.input :phone, as: :string %>
+  <%= f.input :languages, as: :string %>
+  <%= f.input :bio, as: :string %>
+  <%= f.input :city_name, as: :string %>
+  <%= f.input :postal_code, as: :string %>
+  <%= f.input :speciality, as: :string %>
+  <%= f.button :submit %>
+<% end %>   

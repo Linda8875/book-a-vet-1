@@ -1,0 +1,38 @@
+<nav class="nav">
+  <%=link_to root_path do %>
+    <%= image_tag "logo.png", alt: "Book a vet logo", class:"nav__logo" %>
+  <% end %>
+  <ul class="nav__links">
+    <% if vet_signed_in? %>
+      <li class="nav__item">
+        <%= link_to "Log out", destroy_vet_session_path, method: :delete, class: "nav_link" %>
+      </li>
+      <li class="nav__item">
+        <%= link_to "My Profile", vet_path(current_vet), class: "nav__link"%>
+      </li>
+    <% elsif client_signed_in? %>
+     <li class="nav__item">
+        <%= link_to "Log out", destroy_client_session_path, method: :delete, class: "nav_link" %>
+      </li>
+      <li class="nav__item">
+        <%= link_to "My Profile", client_path(current_client), class: "nav__link"%>
+      </li>
+    <% else %>
+      <li class="nav__item">
+        <%= link_to "Login as vet", new_vet_session_path, class: "nav__link" %>
+      </li>
+      <li class="nav__item">
+        <%= link_to "Login as client", new_client_session_path, class: "nav__link" %>
+      </li>
+      <li class="nav__item">
+        <%= link_to "Register as vet clinic",  new_vet_registration_path, class: "nav__link" %>
+      </li>
+      <li class="nav__item">
+        <%= link_to "Register as client", new_client_registration_path, class: "nav__link" %>
+      </li>
+    <% end %>
+    <li class="nav__item">
+      <%= link_to "Help", "#", class: "nav__link" %>
+    </li>
+  </ul>
+</nav>

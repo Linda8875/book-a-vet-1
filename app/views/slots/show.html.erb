@@ -1,0 +1,11 @@
+<h2> Time Slots</h2>
+
+<h1><%=@slot.weekday%></h1>
+
+<p><%= @slot.start_time %></p>
+<p><%= @slot.end_time%></p>
+<p><%= @slot.availability %></p>
+
+
+<%= link_to "Edit Time Slot", edit_vet_slot_path(@slot) %>
+<%= link_to "Delete Time Slot", vet_slot_path(@slot), method: :delete, data: { confirm: "Are you sure?"} %>

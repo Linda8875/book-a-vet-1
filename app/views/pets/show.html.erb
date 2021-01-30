@@ -1,0 +1,13 @@
+<h2> Pet Profile</h2>
+
+<h1><%=@pet.name%></h1>
+
+<p><%= @pet.species %></p>
+<p><%= @pet.health_info %></p>
+<p><%= @pet.birthday %></p>
+
+
+<%= link_to "Edit Profile", edit_pet_path(@pet) %>
+<%= link_to "Delete Profile", pet_path(@pet), method: :delete, data: { confirm: "Are you sure?"} %>
+
+

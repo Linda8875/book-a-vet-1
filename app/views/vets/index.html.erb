@@ -1,0 +1,6 @@
+<% @vets.each do |vet| %>
+<%= vet.first_name %> 
+<%=  vet.last_name %> 
+<%=  vet.id %> 
+<%= link_to vet, vet_path(vet) %>   
+<% end %>

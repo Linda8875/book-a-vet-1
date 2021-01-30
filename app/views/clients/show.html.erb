@@ -1,0 +1,18 @@
+<h2> Profile</h2>
+
+<h1><%="#{@client[:first_name]} #{@client[:last_name]}"%></h1>
+
+<p><%= @client.phone %></p>
+
+
+<%= link_to "Your Pets", pets_path(@client) %>
+
+
+<% if @client == current_client %>
+  <%= link_to "Edit Profile", edit_client_path(@client) %>
+<% end %>
+
+<% if @client == current_client %>
+  <%= link_to "Delete Profile", client_path(@client), method: :delete, data: { confirm: "Are you sure?"} %>
+<% end %>
+

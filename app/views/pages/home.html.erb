@@ -1,0 +1,171 @@
+<div class="header">
+  <div class="header__title">
+    <h1>Book a vet in just a few clicks</h1>
+    <h4>Look for available vet cabinets near you and book a consultation for your pet in just a few clicks!</h4>
+    <button class="btn--text btn--scroll-to">Learn more &DownArrow;</button>
+    <%= image_tag "vet_with_dog.png", alt: "Vet with dog", class:"header__img" %>
+  </div>
+  <div class="searchbar">
+    <%= simple_form_for "path_placeholder", method: :get, wrapper: :inline_form, html: {class: "form-inline"} do |f| %>
+      <%= f.input :city, as: :string, input_html: { class: "searchbar__field" }, placeholder: "When?" %>
+      <%= f.input :pet, as: :select, :collection => ['Dog', 'Cat', 'Other'], input_html: { class: "searchbar__field" }, prompt: "Which pet?" %>
+      <%= f.input :interview_language, :collection => ['Vaccination', 'Sterilisation', 'Check-up', 'Other'], input_html: { class: "searchbar__field" }, prompt: "Why?" %>
+      <%= f.submit "Search", class: "btn btn--search" %>
+    <% end %>
+  </div>
+</div>
+
+<section class="section" id="section--1">
+  <div class="section__header">
+    <h3 class="section__title">Why us?</h3>
+  </div>
+  <div class="usps">
+    <div class="usps__usp">
+      <div class="usps__img">
+        <%= image_tag "24hours_icon.png", alt: "24/7 icon"%>
+      </div>
+      <h5 class="usps__header">Access to thousands of veterinarians 24h/day, 7 days a week.</h5>
+    </div>
+    <div class="usps_usp">
+      <div class="usps__img">
+        <%= image_tag "calendar_icon.png", alt: "calendar icon" %>
+      </div>
+      <h5 class="usps__header">Book instantly and sync your appointment directly in your agenda.</h5>
+    </div>
+    <div class="usps_usp">
+      <div class="usps__img">
+        <%= image_tag "documents_icon.png", alt: "document icon" %>
+      </div>
+      <h5 class="usps__header">Keep track of your documents and your pet's medical records.</h5>
+    </div>  
+  </div>
+</section>
+
+<section class="section" id="section--2">
+  <div class="section__header">
+    <h3 class="section__title">Are you a veterinarian?</h3>
+    <p>
+      Register now and make your life easier!
+      Take advantage of a simple, intuitive and fast solution to connect with your customers and optimize your scheduling.
+    </p>
+  </div>
+ <div class="vet-benefits">
+    <div class="vet-benefits__benefit">
+      <div class="vet-benefits__img">
+        <%= image_tag "tick.png", alt: "tick icon"%>
+      </div>
+      <h5 class="vet-benefits__header">Offer your clients a modern and convenient way of booking </h5>
+    </div>
+    <div class="vet-benefits__benefit">
+      <div class="vet-benefits__img">
+        <%= image_tag "tick.png", alt: "tick icon"%>
+      </div>
+      <h5 class="vet-benefits__header">Unburden your team from time-consuming administration work</h5>
+    </div>
+    <div class="vet-benefits__benefit">
+      <div class="vet-benefits__img">
+        <%= image_tag "tick.png", alt: "tick icon"%>
+      </div>
+      <h5 class="vet-benefits__header">Increase the efficiency and flexibility of your booking process </h5>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="section--3">
+  <div class="section__header">
+    <h3 class="section__title">Testimonials</h3>
+  </div>
+  <div class="slider">
+    <div class="slide">
+      <div class="testimonial">
+        <h5 class="testimonial__title">Testimonial Header!</h5>
+        <blockquote class="testimonial__text">
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+          Accusantium quas quisquam non? Quas voluptate nulla minima
+          deleniti optio ullam nesciunt, numquam corporis et asperiores
+          laboriosam sunt, praesentium suscipit blanditiis. Necessitatibus
+          id alias reiciendis, perferendis facere pariatur dolore veniam
+          autem esse non voluptatem saepe provident nihil molestiae.
+        </blockquote>
+        <address class="testimonial__author">
+          <%= image_tag "ph_avatar1.png", alt: "placeholder avatar"%>
+          <h6 class="testimonial__name">Susan Doolittle</h6>
+          <p class="testimonial__location"> Vet in San Francisco, USA</p>
+        </address>
+      </div>
+    </div>
+
+    <div class="slide">
+      <div class="testimonial">
+        <h5 class="testimonial__header">Testimonial Header!</h5>
+        <blockquote class="testimonial__text">
+          Quisquam itaque deserunt ullam, quia ea repellendus provident,
+          ducimus neque ipsam modi voluptatibus doloremque, corrupti
+          laborum. Incidunt numquam perferendis veritatis neque repellendus.
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illo
+          deserunt exercitationem deleniti.
+        </blockquote>
+        <address class="testimonial__author">
+         <%= image_tag "ph_avatar2.png", alt: "placeholder avatar"%>
+          <h6 class="testimonial__name">Lois Griffin</h6>
+          <p class="testimonial__location">Dog owner in London, UK</p>
+        </address>
+      </div>
+    </div>
+
+    <div class="slide">
+      <div class="testimonial">
+        <h5 class="testimonial__header">Testimonial Header!</h5>
+        <blockquote class="testimonial__text">
+          Debitis, nihil sit minus suscipit magni aperiam vel tenetur
+          incidunt commodi architecto numquam omnis nulla autem,
+          necessitatibus blanditiis modi similique quidem. Odio aliquam
+          culpa dicta beatae quod maiores ipsa minus consequatur error sunt,
+          deleniti saepe aliquid quos inventore sequi. Necessitatibus id
+          alias reiciendis, perferendis facere.
+        </blockquote>
+        <address class="testimonial__author">
+            <%= image_tag "ph_avatar3.png", alt: "placeholder avatar"%>
+          <h6 class="testimonial__name">Salem Saberhagen</h6>
+          <p class="testimonial__location">Cat in Greendale, USA </p>
+        </address>
+      </div>
+    </div>
+
+    <button class="slider__btn slider__btn--left">&larr;</button>
+    <button class="slider__btn slider__btn--right">&rarr;</button>
+    <div class="dots"></div>
+  </div>
+</section>
+
+<footer class="footer">
+  <ul class="footer__nav">
+    <li class="footer__item">
+      <a class="footer__link" href="#">About Us</a>
+    </li>
+    <li class="footer__item">
+      <a class="footer__link" href="#">FAQ</a>
+    </li>
+    <li class="footer__item">
+      <a class="footer__link" href="#">Contact us</a>
+    </li>
+    <li class="footer__item">
+      <a class="footer__link" href="#">Privacy Policy</a>
+    </li>
+    <li class="footer__item">
+      <a class="footer__link" href="#">Terms of Service</a>
+    </li>
+    <li class="footer__item">
+      <a class="footer__link" href="#">Register vet clinic</a>
+    </li>
+    <li class="footer__item">
+      <p>Follow Us</p>
+      <i class="fab fa-facebook-square"></i>
+      <i class="fab fa-instagram-square"></i>
+    </li>
+  </ul>
+  <%= image_tag "logo.png", alt: "Book a vet logo", class:"footer__logo" %>
+  <p class="footer__copyright"> Copyright &copy; 2020</p>
+</footer>
+
+<!-- <script src="script.js"></script> -->
